@@ -51,8 +51,13 @@
     showLabel.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:showLabel];
     
+    UILabel *download = [[UILabel alloc]initWithFrame:CGRectMake(10, 170, self.view.frame.size.width-20, 80)];
+    download.text = @"demo下载地址：\nhttps://github.com/cjq002\n/youdao-openapi-iOSwithJson.git";
+    download.textAlignment = NSTextAlignmentCenter;
+    download.numberOfLines = 0;
+    [self.view addSubview:download];
     
-    showTV = [[UITextView alloc]initWithFrame:CGRectMake(16, 170, WIDTH-32, HIGH-186)];
+    showTV = [[UITextView alloc]initWithFrame:CGRectMake(16, 270, WIDTH-32, HIGH-286)];
     showTV.backgroundColor = [UIColor groupTableViewBackgroundColor];
     showTV.textColor = [UIColor brownColor];
     showTV.font = [UIFont systemFontOfSize:16];

@@ -12,8 +12,9 @@
 //使用API key 时，请求频率限制为每小时1000次，超过限制会被封禁。
 //这两个参数是要自己去申请的，涉及到版权问题。
 
-#define YOUDAO_keyfrom                  @"funchat"
-#define YOUDAO_key                      @"509654697"
+#define YOUDAO_keyfrom          @"funchat"
+#define YOUDAO_key              @"509654697"
+
 
 @interface ViewController (){
     UITextField *inputTF;
@@ -85,7 +86,7 @@
     }
 }
 
-//翻译方法，传入和输出都是NSString类型
+//翻译方法，传入和返回都是NSString类型
 - (NSString *)translateText:(NSString *)string{
     
     NSString *strURL = [NSString stringWithFormat:@"http://fanyi.youdao.com/openapi.do?keyfrom=%@&key=%@&type=data&doctype=json&version=1.1&q=%@",YOUDAO_keyfrom,YOUDAO_key,[string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
